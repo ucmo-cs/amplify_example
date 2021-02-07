@@ -1,0 +1,6 @@
+type Car @model @auth(rules:[{allow:owner}]){
+  id: ID!
+  make: String!
+  model: String!
+  year: Int!
+}
