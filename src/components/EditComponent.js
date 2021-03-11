@@ -5,7 +5,7 @@ import { updateCar } from '../graphql/mutations'
 
 class EditComponent extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state ={
             id: '',
@@ -33,7 +33,6 @@ class EditComponent extends Component {
     saveCar = async (e) => {
         e.preventDefault();
         const input = this.state;
-        console.log("Save Car");
         await API.graphql(graphqlOperation(updateCar, { input : input } ));
         this.props.history.push('/');
     }
